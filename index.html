@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROMETRIC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="container">
+    <div class="sidebar">
+        <div class="bullets">
+            <div class="spans">
+            </div>
+            </div>
+    </div>
+    <div class="app">
+        <div class="timer-container">
+            <div class="timer" id="timer">Section Time<br>02.00.00</div>
+        </div>
+                <h1>
+            prometric SPLE 
+            <button id="finish_btn">
+                Finish Section
+            </button>
+        </h1>
+        <div class="quiz">
+            <h2 id="question">
+                questions here
+            </h2>
+            <button class="calculator-button" id="calculator_button">Calculator</button>
+            <ul id="instructions">
+                <li>
+                    لتغيير اختبار النموذج، يمكنك إغلاق موقع الويب ثم إغلاق المتصفح وفتح المتصفح مرة أخرى وإعادة زيارة موقع الويب
+                </li>
+                <li>
+لإجراء العمليات الحسابية بامكانك استخدام الاله الحاسبة بالضغط على زر لاظهارها او الضغط عليها مرة اخرى لاخفائها
+                </li>
+                <li>
+                لتقوم بالشطب على الاجابة التي تريدها بامكانك الضغط على الجهة اليمنى من الفأرة
+                </li>
+                <li>
+                يمكنك التنقل بين الأسئلة عن طريق الضغط على الزر أسفل الاختبار (التالي ) و ( السابق ) 
+                </li>
+                <li>
+                يمكنك أن تضغط على زر ( العلم) لوضع علامة مميزة على السؤال المراد
+                </li>
+                <li>
+                    الإختبار عبارة عن 105 سؤال في زمن ساعتين و لا يمكن إيقاف الوقت او اخذ استراحة بمجرد بدء الإختبار
+                </li>
+                <li>
+                    يمكنك التنقل بين الأسئلة عن طريق الشريط الجانبي في يسار الشاشة
+                </li>
+            </ul>
+            <div class="calculator" id="helper-calculator">
+                <form action="">
+                    <div class="display">
+                        <input type="text" name="display" placeholder="0">
+                    </div>
+                    <div>
+                        <input  type="button" value="Ac" onclick="display.value = '' " class="operator">
+                        <input class="operator" type="button" value="Del" onclick="display.value = display.value.toString().slice(0,-1)">
+                        <input class="operator" type="button" value="%" onclick="display.value += '%' ">
+                        <input class="operator" type="button" value="/" onclick="display.value += '/' ">
+                    </div>
+                    <div>
+                        <input type="button" value="9" onclick="display.value += '9' ">
+                        <input type="button" value="8" onclick="display.value += '8' ">
+                        <input type="button" value="7" onclick="display.value += '7' ">
+                        <input class="operator" type="button" value="*" onclick="display.value += '*' ">
+                    </div>
+                    <div>
+                        <input type="button" value="6" onclick="display.value += '6' ">
+                        <input type="button" value="5" onclick="display.value += '5' ">
+                        <input type="button" value="4" onclick="display.value += '4' ">
+                        <input class="operator" type="button" value="-" onclick="display.value += '-' ">
+                    </div>
+                    <div>
+                        <input type="button" value="3" onclick="display.value += '3' ">
+                        <input type="button" value="2" onclick="display.value += '2' ">
+                        <input type="button" value="1" onclick="display.value += '1' ">
+                        <input type="button" value="+" onclick="display.value += '+' " class="operator">
+                    </div>
+                    <div>
+                        <input type="button" value="00" onclick="display.value += '00' ">
+                        <input type="button" value="0" onclick="display.value += '0' ">
+                        <input type="button" value="." onclick="display.value += '.' ">
+                        <input type="button" value="=" onclick="display.value = eval(display.value)" class="operator">
+                    </div>
+                </form>
+            </div>
+            <div id="answer_btn">
+                <!-- <div class="btn">1</div>
+                <div class="btn">2</div>
+                <div class="btn">3</div>
+                <div class="btn">4</div> -->
+            </div>
+            <div class="navigation-buttons" id="navigation_buttons">
+        <div id="previous_btn">
+            Previous
+        </div>
+        <div id="flag_btn">
+            <i class="fa-solid fa-flag"></i>
+        </div>
+        <div id="next_btn">
+            Next
+    </div>
+        </div>
+        </div>
+    <h6>
+        BY B&W
+    </h6>
+    </div>
+    </div>
+    <script src="js/js.js"></script>
+</body>
+</html>
